@@ -1,0 +1,438 @@
+$main-color: #E4E4E4;
+$font: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+$borderc: #C71556;
+$pink: #D3145A;
+$light-pink: #FDB8DB;
+$grey: #4E4E4E;
+$light-grey: #696969;
+
+    
+html,
+body {
+    background-color: $main-color;
+    margin: 0;
+    padding: 1px;
+}
+
+
+/*NO SPACES BETWEEN SECTIONS*/
+
+footer,
+#topsection {
+    overflow: auto;
+    /*    ARBA*/
+    /*
+    margin: 0;
+    padding: 1px;
+*/
+}
+
+/*MENIU*/
+
+#topsection {
+    background-color: $pink;
+    padding: 1% 3% 1% 4.5%;
+    display: grid;
+    grid-template-areas: 'icon firstmeniu' 'icon secondmeniu';
+    grid-template-columns: 30% 70%;
+    overflow: hidden;
+}
+
+#icon {
+    grid-area: icon;
+    color: $light-pink;
+    font-size: 30px;
+    position: relative;
+    min-height: 100px;
+    padding-bottom: 2%;
+    h1 {
+    position: absolute;
+    top: 0;
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+}
+}
+
+#topNavID {
+    grid-area: firstmeniu;
+    padding-left: 71%;
+    align-self: end;
+}
+
+/*NAVIGATION MENU*/
+
+#navID {
+    grid-area: secondmeniu;
+    font-size: 25px;
+    align-self: end;
+    padding-left: 44%;
+}
+
+#topNavID {
+    a {
+    padding-left: 5%;
+    white-space: nowrap;
+    /*    NO SPACES IN SENTENCE BETWEEN WORDS*/
+    color: black;
+}
+    a:hover {
+    color: white;
+}
+}
+
+#navID {
+    a {
+    padding-left: 5%;
+    white-space: nowrap;
+    color: white;
+}
+    a:hover {
+    color: black;
+}
+}
+
+/*DROPDOWN MENU*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li {
+   a,
+.meniubtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+    a:hover,
+.drop:hover .meniubtn {
+    color: black;
+}
+    .drop {
+    display: inline-block;
+}
+    
+}
+
+.drop-content {
+    display: none;
+    position: absolute;
+    background-color: $grey;
+    min-width: 150px;
+    font-size: 16px;
+       a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+} 
+    a:hover {
+    background-color: $light-grey;
+    color: white;
+}
+}
+
+.drop:hover .drop-content {
+    display: block;
+}
+
+/*BIG ONE ARTICLE*/
+
+#mainArticle {
+    grid-area: main;
+    background-color: white;
+    padding: 0 2% 2% 2%;
+}
+
+#header1 {
+    font-size: 22px;
+}
+
+/*TWO LITTLE ARTICLES*/
+
+#article2 {
+    grid-area: footer1;
+    background-color: white;
+    padding: 1% 5% 0 5%;
+}
+
+#article3 {
+    grid-area: footer2;
+    background-color: white;
+    padding: 0 5% 3% 5%;
+}
+
+#text-lines {
+    display: flex;
+    flex-direction: column;
+        a {
+    color: #0283B7; 
+}
+    a:hover {
+    color: black;
+}
+}
+
+.line{
+    padding-bottom: 1%;
+    border-bottom:{
+        style: solid;
+        width: 1px;
+        color: darkgrey;
+    }
+}
+
+.line-none {
+    border-bottom-style: none;
+}
+
+/*FILL OUT FIELD WITH SMALL TEXT*/
+
+#enter-field {
+    grid-area: enter;
+}
+
+.strongLine {
+    padding-bottom: 15px;
+     border-bottom:{
+        style: solid;
+        width: 3px;
+        color: black;
+    }
+}
+
+fieldset {
+    margin-top: 10%;
+}
+
+#form-field {
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+}
+
+.space {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5%;
+}
+
+#button {
+    background-color: $borderc;
+    border-color: $borderc;
+    padding: 5px 30px 5px 30px;
+    color: white;
+    font-size: 15px;
+    width: 120px;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+/*3 ARTICLES ABOVE FOOTER*/
+
+#boxes3 {
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    background-color: #CCCCCC;
+    p {
+    padding: 1% 2% 1% 2%;
+}
+} 
+
+#grid-section1 {
+    display: grid;
+    grid-template-columns: 38% 38% 24%;
+    grid-template-areas: 'main main enter' 'footer1 footer2 enter' 'footer footer footer';
+    grid-gap: 30px;
+    padding: 20px;
+}
+
+/*FOOTER*/
+
+footer {
+    background-color: #656565;
+    color: white;
+    padding: 2% 3% 0 4.5%;
+    display: grid;
+    grid-template-columns: 83% 17%;
+    grid-template-areas: 'links .' 'text icon';
+}
+
+#footer-links {
+    grid-area: links;
+        a {
+    color: white;
+    white-space: nowrap;
+}
+    a:not(:first-child) {
+    padding: 0 1% 0 1%;
+}  
+    a:hover {
+    color: black;
+}
+}
+
+#footer-text {
+    grid-area: text;
+}
+
+/*FOOTER ICON*/
+
+#icon2 {
+    grid-area: icon;
+    padding-left: 37%;
+    align-self: end;
+     font: {
+        size: 30px;
+        family: $font;
+    }
+}
+
+/*FOR ALL DOCUMENT*/
+
+p,
+a,
+label {
+    font-family: $font;
+}
+
+/*ALL LINKS*/
+
+a {
+    text-decoration: none;
+}
+
+/*EVERYTHING (EXCEPT PINK HEADER AND FOOTER)*/
+
+#basic {
+    padding: 1% 0 1% 0;
+    width: 90%;
+    margin-left: 3.1%;
+}
+
+/*BRAKE PONTS*/
+
+@media screen and (max-width: 1570px) {
+    #topNavID {
+        padding-left: 35%;
+        float: left;
+    }
+    #navID {
+        padding-left: 15%;
+        display: flex;
+        flex-direction: row;
+        float: right;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    #topsection {
+        padding: 1% 3% 1% 4.5%;
+        display: flex;
+        flex-direction: row;
+    }
+    #icon > h1 {
+        position: inherit;
+        top: 0;
+        padding-right: 0;
+    }
+    #topNavID,
+    #navID {
+        padding-left: 10%;
+        display: flex;
+        align-self: flex-end;
+        padding: 2% 0 2% 0;
+    }
+    #topNavID {
+        padding: 0 7% 7% 7%;
+        a {
+        padding-right: 5%;
+    }
+    }
+    #grid-section1 {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 4%;
+        justify-content: space-between;
+    }
+    #mainArticle,
+    #article2,
+    #article3 {
+        margin-bottom: 2%;
+    }
+    fieldset {
+        margin-top: 1%;
+    }
+    #boxes3 {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2%;
+    }
+    footer {
+        padding: 3% 3% 0 4.5%;
+        display: flex;
+        flex-direction: column;
+    }
+    #icon2 {
+        padding-left: 0;
+        align-self: flex-start;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #topsection {
+        padding: 1% 5% 1% 0;
+        display: flex;
+        flex-direction: column;
+    }
+    ul > .drop > .meniubtn {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #icon {
+        text-align: center;
+        h1 {
+        padding-right: 0;
+    }
+    }
+    #topNavID,
+    #navID {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        padding: 0 0 2% 0;
+    }
+    #icon2 {
+        padding: 0;
+        align-self: center;
+    }
+    #basic {
+        padding: 0;
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #navID {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        padding: 3% 3% 2% 20%;
+    }
+    ul > .drop > .meniubtn {
+        display: flex;
+        flex-direction: column;
+        font-size: 25px;
+    }
+}
